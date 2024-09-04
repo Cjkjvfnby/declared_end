@@ -1,7 +1,7 @@
 import pytest
 
 
-@pytest.fixture()
+@pytest.fixture
 def error_checker(caplog):
     def wrapper(*errors):
         actual = tuple(filter(None, caplog.text.split("\n")))[1:]
